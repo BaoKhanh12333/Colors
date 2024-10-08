@@ -1,0 +1,79 @@
+/* style.css */
+
+/* Reset cơ bản */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Liên kết "Skip to Main Content" */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #000;
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 10px;
+}
+
+/* Thanh điều hướng */
+.navbar {
+    background-color: #333;
+    padding: 10px 20px;
+}
+
+/* Sử dụng Flexbox để bố trí các mục điều hướng */
+.nav-list {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+/* Các liên kết trong thanh điều hướng */
+.nav-list li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hiệu ứng hover cho liên kết */
+.nav-list li a:hover,
+.nav-list li a:focus {
+    background-color: #555;
+    color: #ff0;
+    border-radius: 5px;
+}
+
+/* Responsive Design: Điều hướng trên màn hình nhỏ */
+@media (max-width: 768px) {
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-list li a {
+        padding: 10px;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Chân trang */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
